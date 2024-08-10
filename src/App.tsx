@@ -5,6 +5,7 @@
 // import './App.css'
 // import NavBar from './components/NavBar';
 import { Box, Heading, Text, Input, Stack, Button } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 function App() {
 
@@ -21,7 +22,11 @@ function App() {
       <Input bg={'#544c83'} border={'none'} borderRadius={'10px'} w={'400px'} placeholder='medium size' size='md' />
       <Text>Repeat password</Text>
       <Input bg={'#544c83'} border={'none'} borderRadius={'10px'} w={'400px'} placeholder='medium size' size='md' />
-      <Button bg={'#e53756'} borderRadius={'10px'} color={'white'}>Get Started!</Button>
+      <Button bg={'#e53756'} borderRadius={'10px'} color={'white'} >
+        <Link to={'/Layout'}>
+        Get Started!
+        </Link>
+        </Button>
     
 </Stack>
 

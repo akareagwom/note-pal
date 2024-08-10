@@ -13,7 +13,7 @@ import { Box, Drawer, DrawerBody, List, ListItem ,DrawerFooter,
 
 const NavBar =()=>{
     return (
-        <Box>
+        <Box color={'red'}>
             
         
      background -rgb(37, 150, 190)
