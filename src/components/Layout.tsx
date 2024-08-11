@@ -1,23 +1,19 @@
 import { Link, Outlet } from 'react-router-dom';
 import NavBar from './NavBar';
-import { Box } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 
 
 const Layout: React.FC = () => {
   return (
-    <div>
-      <div className="">
+    <Box display={'flex'}   gap={0} >
+      <Box w={'25%'}>
         <NavBar/>
-      </div>
-
-      <Box bg={'rgb(37, 150, 190)'}>
-        <Outlet />
       </Box>
 
-      <footer>
-        <p>&copy; 2024 Your Company</p>
-      </footer>
-    </div>
+      <Box w={'75%'} bg={'#272140'}>
+        <Outlet />
+      </Box>
+    </Box>
   );
 };
 

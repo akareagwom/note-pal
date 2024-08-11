@@ -13,8 +13,8 @@ import { Box, Drawer, DrawerBody, List, ListItem ,DrawerFooter,
 
 const NavBar =()=>{
     return (
-        <Box w={'25%'} h={'100vh'} bg={'#544c83'}>
-            
+        <Box h={'100vh'} bg={'#544c83'}>
+
             
      background -rgb(37, 150, 190)
      button- #e53756
