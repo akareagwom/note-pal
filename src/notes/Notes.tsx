@@ -1,13 +1,12 @@
 import { Box } from "@chakra-ui/react";
+import CardComp from "./components/CardComp";
 
 const   Notes =()=>{
     return (
         <Box  h={'100vh'}>
             
-            
-     background -rgb(37, 150, 190)
-     button- #e53756
-     input-#544c83
+            <CardComp/>
+     
         </Box>
     )
 }
