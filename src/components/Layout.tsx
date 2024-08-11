@@ -1,5 +1,6 @@
 import { Link, Outlet } from 'react-router-dom';
 import NavBar from './NavBar';
+import { Box } from '@chakra-ui/react';
 
 
 const Layout: React.FC = () => {
@@ -9,9 +10,9 @@ const Layout: React.FC = () => {
         <NavBar/>
       </div>
 
-      <main>
+      <Box bg={'rgb(37, 150, 190)'}>
         <Outlet />
-      </main>
+      </Box>
 
       <footer>
         <p>&copy; 2024 Your Company</p>
