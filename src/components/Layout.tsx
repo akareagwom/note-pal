@@ -10,7 +10,7 @@ const Layout: React.FC = () => {
         <NavBar/>
       </Box>
 
-      <Box h={'100vh'} w={'80%'} pl={14} pt={10} bg={'#272140'}>
+      <Box h={'100vh'} w={'80%'} pl={14} pt={10} >
         <Outlet />
       </Box>
     </Box>
