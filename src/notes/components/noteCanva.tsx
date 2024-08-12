@@ -8,7 +8,7 @@ interface Props {
 const NoteCanva: React.FC<Props> = ({  }) => {
   return (
     <Box>
-      <Textarea border={'none'} outline={'none'} fontSize={'1.5rem'} placeholder='New simple text' />
+      <Textarea variant={'none'} border={'none'} outline={'none'} fontSize={'1.5rem'} placeholder='New simple text' />
     </Box>
   );
 };
