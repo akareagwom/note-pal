@@ -8,7 +8,7 @@ interface Props {
 
 const Save: React.FC<Props> = ({  }) => {
   return (
-    <Flex justifyContent={'space-between'}>
+    <Flex pr={2} justifyContent={'space-between'}>
         <Icon as={IoIosClose} />
         <Button borderRadius={20} h={6} bg={'#e53756'} color={'white'}>Save</Button>
     </Flex>
