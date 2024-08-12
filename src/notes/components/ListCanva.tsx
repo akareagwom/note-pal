@@ -16,6 +16,11 @@ const ListCanva: React.FC<Props> = ({  }) => {
             <Radio/>
             <Radio/>
        </RadioGroup>
+       <RadioGroup>
+            <Radio/>
+            <Radio/>
+            <Radio/>
+       </RadioGroup>
     </Box>
   );
 };
