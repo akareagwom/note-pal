@@ -1,13 +1,12 @@
-import { Box, Drawer, DrawerBody, List, ListItem ,DrawerFooter,
-    DrawerHeader,
-    DrawerOverlay,
-    DrawerContent,
-    DrawerCloseButton,
+import { 
+    Box, 
     Button,
-    useDisclosure,
+    Icon,
     Input,
     Stack
   } from "@chakra-ui/react";
+import { FaStickyNote, FaMicrophone, FaPen, FaTrash } from "react-icons/fa";
+import { LiaListAlt } from "react-icons/lia";
  
 
 
@@ -20,7 +19,12 @@ const NavBar =()=>{
             <Button bg={'#e53756'} color={'white'} p={0} mt={4} borderRadius={20} fontSize={12} h={8} w={'44'}>New Note</Button>
 
             <Stack>
-                
+                {/* <FaStickyNote/> */}
+                <Icon color={'white'} as={FaStickyNote}/>
+                <Icon color={'white'} as={LiaListAlt}/>
+                <Icon color={'white'} as={FaMicrophone}/>
+                <Icon color={'white'} as={FaPen}/>
+                <Icon color={'white'} as={FaTrash}/>
             </Stack>
         </Box>
     )
