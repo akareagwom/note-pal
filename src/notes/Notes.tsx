@@ -6,8 +6,9 @@ const   Notes =()=>{
     return (
         <Box  h={'100vh'}>
             <NoteCanva/>
-            
-            {/* <CardComp/> */}
+           <Box bg={'#272140'}>
+             {/* <CardComp/> */}
+            </Box> 
      
         </Box>
     )
