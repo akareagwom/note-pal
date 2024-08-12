@@ -10,7 +10,7 @@ const Save: React.FC<Props> = ({  }) => {
   return (
     <Flex>
         <Icon as={IoIosClose} />
-        <Button h={6} bg={'#e53756'} color={'white'}>Save</Button>
+        <Button borderRadius={20} h={6} bg={'#e53756'} color={'white'}>Save</Button>
     </Flex>
   );
 };
