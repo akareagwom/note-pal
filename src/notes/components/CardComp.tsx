@@ -1,4 +1,5 @@
 import { Box,  Card, CardHeader, CardBody, Text, Flex} from "@chakra-ui/react"
+import AddNotes from "./AddNotes";
 
 const CardComp =()=>{
     return(
@@ -39,7 +40,9 @@ const CardComp =()=>{
                 </CardBody>
             </Card>
            
-
+            <Box>
+                <AddNotes/>
+            </Box>
         </Flex>
     )
 }
