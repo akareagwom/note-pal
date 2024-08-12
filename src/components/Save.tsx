@@ -10,7 +10,7 @@ const Save: React.FC<Props> = ({  }) => {
   return (
     <Box>
         <Icon as={IoIosClose} />
-        <Button bg={'#e53756'}>Save</Button>
+        <Button bg={'#e53756'} color={'white'}>Save</Button>
     </Box>
   );
 };
