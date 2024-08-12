@@ -4,7 +4,8 @@ import { Box, Drawer, DrawerBody, List, ListItem ,DrawerFooter,
     DrawerContent,
     DrawerCloseButton,
     Button,
-    useDisclosure
+    useDisclosure,
+    Input
   } from "@chakra-ui/react";
  
 
@@ -14,11 +15,8 @@ import { Box, Drawer, DrawerBody, List, ListItem ,DrawerFooter,
 const NavBar =()=>{
     return (
         <Box h={'100vh'} bg={'#544c83'}>
-
-            
-     background -rgb(37, 150, 190)
-     button- #e53756
-     input-#544c83
+            <Input p={0} borderRadius={20} h={8} w={'44'} bg={'#272140'} />
+            <Button p={0}  borderRadius={20} h={8} w={'44'}>New Note</Button>
         </Box>
     )
 }
