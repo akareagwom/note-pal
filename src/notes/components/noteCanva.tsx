@@ -10,7 +10,7 @@ const NoteCanva: React.FC<Props> = ({  }) => {
   return (
     <Box>
         <Save/>
-      <Textarea variant={'none'} border={'none'} outline={'none'} fontSize={'1.5rem'} placeholder='New simple text' />
+      <Textarea color={'#272140'} variant={'none'} border={'none'} outline={'none'} fontSize={'1.5rem'} placeholder='New simple text' />
     </Box>
   );
 };
