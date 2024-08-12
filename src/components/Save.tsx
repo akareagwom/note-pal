@@ -1,5 +1,6 @@
 import { Box, Icon } from '@chakra-ui/react';
 import React from 'react';
+import { IoIosClose } from "react-icons/io";
 
 interface Props {
   
@@ -8,7 +9,7 @@ interface Props {
 const Save: React.FC<Props> = ({  }) => {
   return (
     <Box>
-        <Icon/>
+        <Icon as={IoIosClose} />
     </Box>
   );
 };
