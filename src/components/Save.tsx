@@ -1,4 +1,4 @@
-import { Box, Icon } from '@chakra-ui/react';
+import { Box, Button, Icon } from '@chakra-ui/react';
 import React from 'react';
 import { IoIosClose } from "react-icons/io";
 
@@ -10,6 +10,7 @@ const Save: React.FC<Props> = ({  }) => {
   return (
     <Box>
         <Icon as={IoIosClose} />
+        <Button>Save</Button>
     </Box>
   );
 };
