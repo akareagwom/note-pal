@@ -6,7 +6,6 @@ import {
     Input,
     Stack,
     Text,
-    Image,
     Avatar
   } from "@chakra-ui/react";
 import { FaStickyNote, FaMicrophone, FaPen, FaTrash } from "react-icons/fa";

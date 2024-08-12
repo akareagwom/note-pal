@@ -1,6 +1,6 @@
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import NavBar from './NavBar';
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, } from '@chakra-ui/react';
 
 
 const Layout: React.FC = () => {
