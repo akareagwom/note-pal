@@ -4,7 +4,7 @@ interface Props {
   
 }
 
-const ComponentName: React.FC<Props> = ({  }) => {
+const ListCanva: React.FC<Props> = ({  }) => {
   return (
     <div>
       
@@ -12,4 +12,4 @@ const ComponentName: React.FC<Props> = ({  }) => {
   );
 };
 
-export default ComponentName;
+export default ListCanva;
