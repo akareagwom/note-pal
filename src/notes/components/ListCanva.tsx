@@ -17,7 +17,7 @@ const ListCanva: React.FC<Props> = ({  }) => {
             <Radio/>
        </RadioGroup>
        <RadioGroup>
-            <Radio/>
+            <Radio bg={'red'} color={'red'}/>
             <Radio/>
             <Radio/>
        </RadioGroup>
