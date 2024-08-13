@@ -1,4 +1,4 @@
-import { Box,  Card, CardHeader, CardBody, Text, Flex} from "@chakra-ui/react"
+import { Box,  Card, CardBody, Text, Flex} from "@chakra-ui/react"
 import AddNotes from "./AddNotes";
 
 const CardComp =()=>{
