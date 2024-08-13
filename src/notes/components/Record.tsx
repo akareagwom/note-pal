@@ -2,7 +2,7 @@ import React from 'react';
 // import { useReactMediaRecorder } from 'react-media-recorder';   
 import { Box, Button, Flex, Icon, Text } from '@chakra-ui/react';
 import { useReactMediaRecorder } from 'react-media-recorder';
-import { FaPlay } from "react-icons/fa";
+import { FaPlay, fa6 } from "react-icons/fa";
 import { MdReplay } from "react-icons/md";
 
 interface Props {
@@ -37,6 +37,7 @@ const Record: React.FC<Props> = ({  }) => {
           <Text mt={2} fontSize="sm">
             <Icon as={FaPlay}/>
             <Icon as={MdReplay}/>
+            <Icon as={fa6} />
           </Text>
         </Box>
       )}
