@@ -1,22 +1,25 @@
 import React from 'react';
-import { useReactMediaRecorder } from 'react-media-recorder';   
+// import { useReactMediaRecorder } from 'react-media-recorder';   
 import { Box, Button, Flex, Text } from '@chakra-ui/react';
+import { useReactMediaRecorder } from 'react-media-recorder';
 
 
 interface Props {
   
 }
-const {
-    status,
-    startRecording,
-    stopRecording,
-    mediaBlobUrl,
-  } = useReactMediaRecorder({ audio: true });
+// const {
+    // status,
+    // startRecording,
+    // stopRecording,
+    // mediaBlobUrl,
+//   } = useReactMediaRecorder({ audio: true });
+const {} = useReactMediaRecorder({audio:true})
 
 const Record: React.FC<Props> = ({  }) => {
   return (
-    <Flex direction="column" align="center" justify="center" p={4}>
-      <Text fontSize="xl" mb={4}>
+    <Flex direction="column" color={'white'} align="center" justify="center" p={4}>
+        <Text fontSize="xl" mb={4}>Record Audio</Text>
+      {/* <Text fontSize="xl" mb={4}>
         Status: {status}
       </Text>
       <Box mb={4}>
@@ -34,7 +37,7 @@ const Record: React.FC<Props> = ({  }) => {
             Recording preview
           </Text>
         </Box>
-      )}
+      )} */}
     </Flex>
   );
 };
