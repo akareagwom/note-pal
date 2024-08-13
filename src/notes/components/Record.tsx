@@ -32,12 +32,11 @@ const Record: React.FC<Props> = ({  }) => {
         </Button>
       </Box>
       {mediaBlobUrl && (
-        <Box mt={4}>
+          <Box mt={4}>
           <audio src={mediaBlobUrl} controls />
           <Text mt={2} fontSize="sm">
-            Recording preview
+            <Icon as={FaPlay}/>
           </Text>
-          <Icon as={FaPlay}/>
         </Box>
       )}
     </Flex>
