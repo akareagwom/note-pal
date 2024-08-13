@@ -1,14 +1,16 @@
 import { Box } from "@chakra-ui/react";
+import Record from "./components/Record";
 // import CardComp from "./components/CardComp";
 // import NoteCanva from "./components/noteCanva";
-import ListCanva from "./components/ListCanva";
+// import ListCanva from "./components/ListCanva";
 
 const   Notes =()=>{
     return (
         <Box  h={'100vh'}>
             {/* <NoteCanva/> */}
-            <ListCanva/>
+            {/* <ListCanva/> */}
            <Box bg={'#272140'}>
+            <Record/>
 
              {/* <CardComp/> */}
             </Box> 
