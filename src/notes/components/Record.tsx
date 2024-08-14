@@ -1,48 +1,100 @@
-import React from 'react';
-// import { useReactMediaRecorder } from 'react-media-recorder';   
-import { Box, Button, Flex, Icon, Text } from '@chakra-ui/react';
-import { useReactMediaRecorder } from 'react-media-recorder';
-import { FaPlay } from "react-icons/fa";
-import { FaPause } from "react-icons/fa6";
-import { MdReplay } from "react-icons/md";
+// import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Button, Box, IconButton, Text } from '@chakra-ui/react';
+import { ReactMediaRecorder } from 'react-media-recorder';
+import { FaPlay, FaStop, FaRedo, FaRecordVinyl } from 'react-icons/fa';
+import WaveSurfer from 'wavesurfer.js';
 
-interface Props {
-  
-}
-// const {
-   
-//   } = useReactMediaRecorder({ audio: true });
+const Record: React.FC = () => {
+  const [audioSrc, setAudioSrc] = useState<string | null>(null);
+  const [waveform, setWaveform] = useState<WaveSurfer | null>(null);
+  const [timer, setTimer] = useState(0);
+  const timerRef = useRef(null);
 
-const Record: React.FC<Props> = ({  }) => {
-    const { status,
-        startRecording,
-        stopRecording,
-        mediaBlobUrl,} = useReactMediaRecorder({audio:true})
+  useEffect(() => {
+    if (waveform && audioSrc) {
+      waveform.load(audioSrc);
+    }
+  }, [waveform, audioSrc]);
+
+  useEffect(() => {
+    if (timer > 0) {
+      timerRef.current = setInterval(() => {
+        setTimer((prevTimer) => prevTimer + 1);
+      }, 1000);
+      return () => clearInterval(timerRef.current!);
+    }
+  }, [timer]);
+
   return (
-    <Flex direction="column" color={'white'} align="center" justify="center" p={4}>
-        <Text fontSize="xl" mb={4}>Record Audio</Text>
-      <Text fontSize="xl" mb={4}>
-        Status: {status}
-      </Text>
-      <Box mb={4}>
-        <Button colorScheme="teal" mr={4} onClick={startRecording}>
-          Start Recording
-        </Button>
-        <Button colorScheme="red" onClick={stopRecording}>
-          Stop Recording
-        </Button>
-      </Box>
-      {mediaBlobUrl && (
-          <Box mt={4}>
-          <audio src={mediaBlobUrl} controls />
-          <Text mt={2} fontSize="sm">
-            <Icon as={FaPlay}/>
-            <Icon as={MdReplay}/>
-            <Icon as={FaPause} />
-          </Text>
-        </Box>
-      )}
-    </Flex>
+    <Box textAlign="center" mt={10}>
+      <ReactMediaRecorder
+        audio
+        onStop={(blobUrl) => {
+          setAudioSrc(blobUrl);
+          setWaveform(WaveSurfer.create({ container: '#waveform' }));
+        }}
+        render={({ startRecording, stopRecording, mediaBlobUrl, status }) => (
+          <>
+            <Box id="waveform" mb={4}></Box>
+            <Text fontSize="2xl" mb={4}>
+              {new Date(timer * 1000).toISOString().substr(14, 5)}
+            </Text>
+            <Box>
+              <IconButton
+                onClick={() => {
+                  setAudioSrc(null);
+                  setTimer(0);
+                  startRecording();
+                }}
+                icon={<FaRecordVinyl />}
+                aria-label="Record"
+                colorScheme="red"
+                size="lg"
+                mr={2}
+              />
+              <IconButton
+                onClick={() => {
+                  stopRecording();
+                  clearInterval(timerRef.current!);
+                }}
+                icon={<FaStop />}
+                aria-label="Stop"
+                colorScheme="blue"
+                size="lg"
+                mr={2}
+              />
+              <IconButton
+                onClick={() => {
+                  setAudioSrc(null);
+                  setWaveform(null);
+                  setTimer(0);
+                }}
+                icon={<FaRedo />}
+                aria-label="Reset"
+                size="lg"
+              />
+            </Box>
+
+            {mediaBlobUrl && (
+              <Box mt={4}>
+                <IconButton
+                  as="a"
+                  href={mediaBlobUrl}
+                  target="_blank"
+                  icon={<FaPlay />}
+                  aria-label="Play"
+                  size="lg"
+                  colorScheme="green"
+                  mr={2}
+                />
+                <audio src={mediaBlobUrl} controls />
+              </Box>
+            )}
+          </>
+        )}
+      />
+    </Box>
   );
 };
 
