@@ -9,7 +9,7 @@ const Record: React.FC = () => {
   const [audioSrc, setAudioSrc] = useState<string | null>(null);
   const [waveform, setWaveform] = useState<WaveSurfer | null>(null);
   const [timer, setTimer] = useState(0);
-  const timerRef = useRef(null);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     if (waveform && audioSrc) {
@@ -34,7 +34,7 @@ const Record: React.FC = () => {
           setAudioSrc(blobUrl);
           setWaveform(WaveSurfer.create({ container: '#waveform' }));
         }}
-        render={({ startRecording, stopRecording, mediaBlobUrl, status }) => (
+        render={({ startRecording, stopRecording, mediaBlobUrl}) => (
           <>
             <Box id="waveform" mb={4}></Box>
             <Text fontSize="2xl" mb={4}>
