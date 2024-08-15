@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import Record from "./components/Record";
+import Recorder from "./components/Recorder";
 // import CardComp from "./components/CardComp";
 // import NoteCanva from "./components/noteCanva";
 // import ListCanva from "./components/ListCanva";
@@ -10,7 +10,7 @@ const   Notes =()=>{
             {/* <NoteCanva/> */}
             {/* <ListCanva/> */}
            <Box bg={'#272140'}>
-            <Record/>
+            <Recorder/>
 
              {/* <CardComp/> */}
             </Box> 
