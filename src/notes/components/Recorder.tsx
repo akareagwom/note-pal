@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Button } from '@chakra-ui/react';
 import React from 'react';
 import { ReactMediaRecorder } from 'react-media-recorder';
 import WaveSurfer from 'wavesurfer.js';
@@ -17,8 +17,13 @@ const wavesurfer = WaveSurfer.create({
 const Recorder: React.FC<Props> = ({  }) => {
   return (
     <Box>
-      <ReactMediaRecorder render={({startRecording,  })=>(
-        <div id="waveform" />
+      <ReactMediaRecorder 
+      audio
+       render={({startRecording,stopRecording  })=>(
+       <Box>
+        <Button onClick={startRecording}></Button>
+        <Button onClick={stopRecording}></Button>
+       </Box>
       )}/>
     </Box>
   );
