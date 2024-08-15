@@ -1,7 +1,7 @@
 import { Box, Button } from '@chakra-ui/react';
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { ReactMediaRecorder } from 'react-media-recorder';
-// import WaveSurfer from 'wavesurfer.js';
+import WaveSurfer from 'wavesurfer.js';
 
 interface Props {
   
@@ -15,10 +15,24 @@ interface Props {
 //   })
 
 const Recorder: React.FC<Props> = ({  }) => {
+    const [waveform, setWaveform] = useState<WaveSurfer | null>(null);
+    const [audioSrc, setAudioSrc] = useState<string | null>(null);
+
+    useEffect(() => {
+        if (waveform && audioSrc) {
+          waveform.load(audioSrc);
+        }
+      }, [waveform, audioSrc]);
+    
+
   return (
     <Box>
       <ReactMediaRecorder 
       audio
+      onStop={(blobUrl)=>{
+        setAudioSrc(blobUrl);
+        setWaveform(WaveSurfer.create({container:'#wave',waveColor:'#000'}))
+      }}
        render={({startRecording,stopRecording, mediaBlobUrl  })=>(
        <Box>
         <Button onClick={startRecording}>start</Button>
