@@ -1,3 +1,4 @@
+import { Box } from '@chakra-ui/react';
 import React from 'react';
 
 interface Props {
@@ -6,9 +7,9 @@ interface Props {
 
 const Recorder: React.FC<Props> = ({  }) => {
   return (
-    <div>
+    <Box>
       
-    </div>
+    </Box>
   );
 };
 

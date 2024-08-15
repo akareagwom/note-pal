@@ -32,7 +32,7 @@ const Record: React.FC = () => {
         audio
         onStop={(blobUrl) => {
           setAudioSrc(blobUrl);
-          setWaveform(WaveSurfer.create({ container: '#waveform' }));
+          setWaveform(WaveSurfer.create({ container: '#waveform',waveColor: '#000', }));
         }}
         render={({ startRecording, stopRecording, mediaBlobUrl}) => (
           <>
