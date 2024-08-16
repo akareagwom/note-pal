@@ -9,16 +9,12 @@ import { Box, Button, useDisclosure,
     ModalCloseButton,
     Icon,
 } from "@chakra-ui/react"
-import { useState } from "react";
+
 import { FaArrowRight } from "react-icons/fa";
 
 const AddNotes =()=>{
     const { isOpen, onOpen, onClose } = useDisclosure();
-    const [note, setNote] = useState('');
 
-    const handleNote =()=>{
-        setNote('')
-    }
     return(
         <Box  textAlign={'center'}>
             <Button onClick={onOpen} mt={6} mx={40} bg={'#e53756'} color={'white'}>+</Button>
