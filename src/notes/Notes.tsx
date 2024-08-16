@@ -1,8 +1,8 @@
 import { Box } from "@chakra-ui/react";
 // import Record from "./components/Record";
-// import CardComp from "./components/CardComp";
+import CardComp from "./components/CardComp";
 import NoteCanva from "./components/noteCanva";
-import React, { useState } from 'react';
+import { useState } from 'react';
 // import ListCanva from "./components/ListCanva";
 
 const   Notes =()=>{
@@ -16,7 +16,7 @@ const   Notes =()=>{
            <Box>
             {/* <Record/> */}
 
-             {/* <CardComp/> */}
+             <CardComp cards={cards} />
             </Box> 
      
         </Box>

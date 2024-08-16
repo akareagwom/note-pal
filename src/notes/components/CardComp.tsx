@@ -1,7 +1,15 @@
 import { Box,  Card, CardBody, Text, Flex} from "@chakra-ui/react"
+import React from 'react';
 import AddNotes from "./AddNotes";
 
-const CardComp =()=>{
+interface Props {
+    // note: string;
+    // setNote: Dispatch<SetStateAction<string>>;
+    cards: string[];
+    // setCards: Dispatch<SetStateAction<string[]>>;
+  }
+
+const CardComp: React.FC<Props> =({ cards})=>{
     return(
         <Flex  gap={2} flexWrap={'wrap'}>
             <Card borderRadius={15} w={'45%'} p={4} bg='rgba(218,187,250,255)'>
