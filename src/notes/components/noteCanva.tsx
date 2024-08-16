@@ -1,6 +1,5 @@
 import { Box, Button, Textarea, Flex, Icon, Card, CardBody, Text } from '@chakra-ui/react';
-import React, { useState,Dispatch, SetStateAction  } from 'react';
-// import Save from '../../components/Save';
+import React, {Dispatch, SetStateAction  } from 'react';
 import { IoIosClose } from "react-icons/io";
 
 interface Props {
@@ -11,8 +10,6 @@ interface Props {
   }
 
 const NoteCanva: React.FC<Props> = ({ note, setNote,cards, setCards }) => {
-//   const [note, setNote] = useState<string>('');
-//   const [cards,setCards] = useState<string[]>([])
 
   const handleNoteChange = () => {
     if (note.trim()) { 
