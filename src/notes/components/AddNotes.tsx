@@ -1,5 +1,5 @@
 import { Box, Button, useDisclosure,
-    Text,
+    // Text,
      Modal,
     ModalOverlay,
     ModalContent,
@@ -9,10 +9,16 @@ import { Box, Button, useDisclosure,
     ModalCloseButton,
     Icon,
 } from "@chakra-ui/react"
+import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 
 const AddNotes =()=>{
-    const { isOpen, onOpen, onClose } = useDisclosure()
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const [note, setNote] = useState('');
+
+    const handleNote =()=>{
+        setNote('')
+    }
     return(
         <Box  textAlign={'center'}>
             <Button onClick={onOpen} mt={6} mx={40} bg={'#e53756'} color={'white'}>+</Button>
@@ -21,12 +27,11 @@ const AddNotes =()=>{
         <ModalContent>
           <ModalHeader>Add New</ModalHeader>
           <ModalCloseButton />
-          <ModalBody lineHeight={2}>
-            {/* <Lorem count={2} /> */}
-            <Text>Simple note</Text>
-            <Text>List</Text>
-            <Text>Record note</Text>
-            <Text>Sketch</Text>
+          <ModalBody display={'inline-block'} justifyContent={'start'} textAlign={'left'} alignItems={''} lineHeight={2}>
+            <Button variant={'none'}>Simple note</Button>
+            <Button variant={'none'}>List</Button>
+            <Button variant={'none'}>Record note</Button>
+            <Button variant={'none'}>Sketch</Button>
           </ModalBody>
 
           <ModalFooter>
