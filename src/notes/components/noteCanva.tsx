@@ -8,10 +8,12 @@ interface Props {
 }
 
 const NoteCanva: React.FC<Props> = ({  }) => {
-  const [note, setNote] = useState('');
+  const [note, setNote] = useState<string>('');
+  const [cards,setCards] = useState<string[]>([])
 
   const handleNoteChange = () => {
-    if (note.trim()) {     
+    if (note.trim()) { 
+        setCards([...cards, note]); 
       setNote('');
     }
   };
