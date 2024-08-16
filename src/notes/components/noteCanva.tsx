@@ -1,4 +1,4 @@
-import { Box, Button, Textarea, Flex, Icon } from '@chakra-ui/react';
+import { Box, Button, Textarea, Flex, Icon, Card, CardBody, Text } from '@chakra-ui/react';
 import React, { useState,Dispatch, SetStateAction  } from 'react';
 // import Save from '../../components/Save';
 import { IoIosClose } from "react-icons/io";
@@ -37,11 +37,15 @@ const NoteCanva: React.FC<Props> = ({ note, setNote,cards, setCards }) => {
         value={note}
         onChange={(e) => setNote(e.target.value)}
       />
-       {/* <Card borderRadius={15} w={'45%'} p={4} bg='rgba(218,187,250,255)'>
+      {cards.map((card)=>(
+       <Card borderRadius={15} w={'45%'} p={4} bg='rgba(218,187,250,255)'>
                 <CardBody >
-                    <Text color={'#272140'}>hola</Text>
+                    <Text color={'#272140'}>{card}</Text>
                 </CardBody>
-            </Card> */}
+        </Card>
+      )
+
+      )}
     </Box>
   );
 };
