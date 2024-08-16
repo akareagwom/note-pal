@@ -1,20 +1,23 @@
 import { Box, Button, Textarea, Flex, Icon } from '@chakra-ui/react';
-import React, { useState } from 'react';
+import React, { useState,Dispatch, SetStateAction  } from 'react';
 // import Save from '../../components/Save';
 import { IoIosClose } from "react-icons/io";
 
 interface Props {
-//   handleNote: (note: string) => void;
-}
+    note: string;
+    setNote: Dispatch<SetStateAction<string>>;
+    cards: string[];
+    setCards: Dispatch<SetStateAction<string[]>>;
+  }
 
-const NoteCanva: React.FC<Props> = ({  }) => {
-  const [note, setNote] = useState<string>('');
-  const [cards,setCards] = useState<string[]>([])
+const NoteCanva: React.FC<Props> = ({ note, setNote,cards, setCards }) => {
+//   const [note, setNote] = useState<string>('');
+//   const [cards,setCards] = useState<string[]>([])
 
   const handleNoteChange = () => {
     if (note.trim()) { 
         setCards([...cards, note]); 
-      setNote('');
+        setNote('');
     }
   };
 
@@ -34,6 +37,11 @@ const NoteCanva: React.FC<Props> = ({  }) => {
         value={note}
         onChange={(e) => setNote(e.target.value)}
       />
+       {/* <Card borderRadius={15} w={'45%'} p={4} bg='rgba(218,187,250,255)'>
+                <CardBody >
+                    <Text color={'#272140'}>hola</Text>
+                </CardBody>
+            </Card> */}
     </Box>
   );
 };
