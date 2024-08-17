@@ -34,15 +34,6 @@ const NoteCanva: React.FC<Props> = ({ note, setNote,cards, setCards }) => {
         value={note}
         onChange={(e) => setNote(e.target.value)}
       />
-      {cards.map((card)=>(
-       <Card borderRadius={15} w={'45%'} p={4} bg='rgba(218,187,250,255)'>
-                <CardBody >
-                    <Text color={'#272140'}>{card}</Text>
-                </CardBody>
-        </Card>
-      )
-
-      )}
     </Box>
   );
 };

@@ -1,6 +1,6 @@
 // import React from 'react';
 import React, { useState, useEffect, useRef } from 'react';
-import { Button, Box, IconButton, Text } from '@chakra-ui/react';
+import { Box, IconButton, Text } from '@chakra-ui/react';
 import { ReactMediaRecorder } from 'react-media-recorder';
 import { FaPlay, FaStop, FaRedo, FaRecordVinyl } from 'react-icons/fa';
 import WaveSurfer from 'wavesurfer.js';

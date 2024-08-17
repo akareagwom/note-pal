@@ -12,12 +12,14 @@ interface Props {
 const CardComp: React.FC<Props> =({ cards})=>{
     return(
         <Flex  gap={2} flexWrap={'wrap'}>
-            <Card borderRadius={15} w={'45%'} p={4} bg='rgba(218,187,250,255)'>
-                <CardBody >
-                    <Text color={'#272140'}>hola</Text>
-                </CardBody>
-            </Card>
-            <Card borderRadius={15} w={'45%'} p={4} bg={'rgba(215,238,248,255)'}>
+            {cards.map((card)=>(
+                <Card borderRadius={15} w={'45%'} p={4} bg='rgba(218,187,250,255)'>
+                    <CardBody >
+                        <Text color={'#272140'}>{card}</Text>
+                    </CardBody>
+                </Card>
+            ))}
+            {/* <Card borderRadius={15} w={'45%'} p={4} bg={'rgba(215,238,248,255)'}>
                 <CardBody>
                     <Text color={'#272140'}>hola</Text>
                 </CardBody>
@@ -47,7 +49,7 @@ const CardComp: React.FC<Props> =({ cards})=>{
                     <Text color={'#272140'}>hola</Text>
                 </CardBody>
             </Card>
-           
+            */}
             <Box>
                 <AddNotes/>
             </Box>
