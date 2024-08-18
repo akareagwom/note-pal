@@ -11,6 +11,7 @@ import {
 import { FaStickyNote, FaMicrophone, FaPen, FaTrash } from "react-icons/fa";
 import { LiaListAlt } from "react-icons/lia";
 import { IoIosArrowDown,IoIosSettings } from "react-icons/io";
+import { Link } from "react-router-dom";
  
 
 
@@ -36,11 +37,12 @@ const NavBar =()=>{
             </Box>
 
             <Stack lineHeight={2} mt={6} color={'white'}>
-                {/* <FaStickyNote/> */}
-                <Flex alignItems={'center'}  >
-                 <Icon color={'white'} as={FaStickyNote}/>
-                 <Text ml={4} fontSize={15}>Notes</Text>
-                </Flex>
+                <Link to='/Notes' >
+                    <Flex alignItems={'center'}  >
+                    <Icon color={'white'} as={FaStickyNote}/>
+                    <Text ml={4} fontSize={15}>Notes</Text>
+                    </Flex>
+                </Link>
                 <Flex alignItems={'center'}  >
                     <Icon color={'white'} as={LiaListAlt}/>
                     <Text ml={4} fontSize={15}>List</Text>
