@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ChakraProvider } from '@chakra-ui/react'
 import Layout from './components/Layout.tsx'
 import Notes from './notes/Notes.tsx'
+import List from './list/List.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -15,7 +16,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/" element={<App />} />
           <Route path='/Layout' element ={<Layout/>}>
             <Route index element ={<Notes/>}/>
-          {/* <Route path="home" element={<Home />} /> */}
+            <Route path="list" element={<List />} />
           </Route>
         </Routes>
       </BrowserRouter>
