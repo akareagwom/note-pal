@@ -1,4 +1,4 @@
-import { Box, Button, Textarea, Flex, Icon, Card, CardBody, Text } from '@chakra-ui/react';
+import { Box, Button, Textarea, Flex, Icon } from '@chakra-ui/react';
 import React, {Dispatch, SetStateAction  } from 'react';
 import { IoIosClose } from "react-icons/io";
 
