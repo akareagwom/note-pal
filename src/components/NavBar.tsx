@@ -43,10 +43,12 @@ const NavBar =()=>{
                     <Text ml={4} fontSize={15}>Notes</Text>
                     </Flex>
                 </Link>
-                <Flex alignItems={'center'}  >
-                    <Icon color={'white'} as={LiaListAlt}/>
-                    <Text ml={4} fontSize={15}>List</Text>
-                </Flex>
+                <Link to='list' >
+                    <Flex alignItems={'center'}  >
+                        <Icon color={'white'} as={LiaListAlt}/>
+                        <Text ml={4} fontSize={15}>List</Text>
+                    </Flex>
+                </Link>
                 <Flex alignItems={'center'}  >
                     <Icon color={'white'} as={FaMicrophone}/>
                     <Text ml={4} fontSize={15}>Recording</Text>
