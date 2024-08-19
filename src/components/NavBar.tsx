@@ -37,7 +37,7 @@ const NavBar =()=>{
             </Box>
 
             <Stack lineHeight={2} mt={6} color={'white'}>
-                <Link to='/Notes' >
+                <Link to='/Layout' >
                     <Flex alignItems={'center'}  >
                     <Icon color={'white'} as={FaStickyNote}/>
                     <Text ml={4} fontSize={15}>Notes</Text>
