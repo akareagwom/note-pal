@@ -5,7 +5,7 @@ import React from 'react';
 
 
 
-const AddNotes: React.FC = ({  }) => {
+const AddList: React.FC = ({  }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
 
@@ -35,4 +35,4 @@ const AddNotes: React.FC = ({  }) => {
   );
 };
 
-export default AddNotes;
+export default AddList;
