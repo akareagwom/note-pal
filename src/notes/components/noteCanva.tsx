@@ -1,6 +1,7 @@
 import { Box, Button, Textarea, Flex, Icon } from '@chakra-ui/react';
 import React, {Dispatch, SetStateAction  } from 'react';
 import { IoIosClose } from "react-icons/io";
+import {saveToLocalStorage,getFromLocalStorage} from '../../localStorageUtils'
 
 interface Props {
     note: string;
