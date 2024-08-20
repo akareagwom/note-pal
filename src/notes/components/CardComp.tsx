@@ -9,7 +9,7 @@ interface Props {
     setCards: Dispatch<SetStateAction<string[]>>;
   }
 
-const CardComp: React.FC<Props> =({ cards})=>{
+const CardComp: React.FC<Props> =({ cards, note,setCards,setNote})=>{
     return(
         <Flex  gap={2} flexWrap={'wrap'}>
             {cards.map((card)=>(
@@ -20,7 +20,7 @@ const CardComp: React.FC<Props> =({ cards})=>{
                 </Card>
             ))}
             <Box>
-                {/* <AddNotes cards={cards} setCards={setCards} note={note} setNote={setNote}/> */}
+                <AddNotes cards={cards} setCards={setCards} note={note} setNote={setNote}/>
             </Box>
         </Flex>
     )

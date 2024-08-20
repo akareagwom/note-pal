@@ -16,7 +16,7 @@ const   Notes =()=>{
            <Box>
             {/* <Record/> */}
 
-             <CardComp cards={cards} />
+             <CardComp cards={cards} setCards={setCards} note={note} setNote={setNote} />
             </Box> 
      
         </Box>
