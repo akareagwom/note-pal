@@ -1,12 +1,12 @@
 import { Box,  Card, CardBody, Text, Flex} from "@chakra-ui/react"
-import React from 'react';
+import React, {Dispatch, SetStateAction  } from 'react';
 import AddNotes from "./AddNotes";
 
 interface Props {
-    // note: string;
-    // setNote: Dispatch<SetStateAction<string>>;
+    note: string;
+    setNote: Dispatch<SetStateAction<string>>;
     cards: string[];
-    // setCards: Dispatch<SetStateAction<string[]>>;
+    setCards: Dispatch<SetStateAction<string[]>>;
   }
 
 const CardComp: React.FC<Props> =({ cards})=>{
@@ -20,7 +20,7 @@ const CardComp: React.FC<Props> =({ cards})=>{
                 </Card>
             ))}
             <Box>
-                <AddNotes/>
+                {/* <AddNotes cards={cards} setCards={setCards} note={note} setNote={setNote}/> */}
             </Box>
         </Flex>
     )

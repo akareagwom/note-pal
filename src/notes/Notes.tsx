@@ -11,7 +11,7 @@ const   Notes =()=>{
   
     return (
         <Box  h={'100vh'}>
-            <NoteCanva cards={cards} setCards={setCards} note={note} setNote={setNote} />
+            {/* <NoteCanva cards={cards} setCards={setCards} note={note} setNote={setNote} /> */}
             {/* <ListCanva/> */}
            <Box>
             {/* <Record/> */}
