@@ -4,9 +4,18 @@ import List from './list/List.tsx'
 import NoteCanva from './notes/components/noteCanva.tsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './index.tsx'
+import {useState} from 'react'
 
-function App() {
+// interface Props {
+//   note: string;
+//   setNote: React.Dispatch<React.SetStateAction<string>>;
+//   cards: string[];
+//   setCards: React.Dispatch<React.SetStateAction<string[]>>;
+// }
 
+const App: React.FC = () => {
+  // const [cards, setCards] = useState<string[]>([]);
+  // const [note, setNote] = useState<string>('');
   return (
     <BrowserRouter>
     <Routes>
