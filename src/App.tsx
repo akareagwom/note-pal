@@ -1,37 +1,22 @@
-// import { useState } from 'react';
-// import { Link, Outlet } from 'react-router-dom';
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
-// import NavBar from './components/NavBar';
-import { Box, Heading, Text, Input, Stack, Button } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
+import Layout from './components/Layout.tsx'
+import Notes from './notes/Notes.tsx'
+import List from './list/List.tsx'
+import NoteCanva from './notes/components/noteCanva.tsx'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
 
   return (
-    <Box w='100%' display={'flex'} flexDir={'column'} alignItems={'center'} color='white' h={'100vh'} bg={'#272140'}>
-     <Box textAlign={'left'} mr={'140px'} mt={6}>
-      <Heading color={'white'} fontSize={'3rem'}>Remind me</Heading>
-      <Text color={'#544c83'}>Note taking made easy</Text>
-     </Box>
-     <Stack mt={16} spacing={3}>
-      <Text>Email address</Text>
-      <Input bg={'#544c83'} border={'none'} borderRadius={'10px'} w={'400px'} placeholder='medium size' size='md' />
-      <Text>Password</Text>
-      <Input bg={'#544c83'} border={'none'} borderRadius={'10px'} w={'400px'} placeholder='medium size' size='md' />
-      <Text>Repeat password</Text>
-      <Input bg={'#544c83'} border={'none'} borderRadius={'10px'} w={'400px'} placeholder='medium size' size='md' />
-      <Button bg={'#e53756'} borderRadius={'10px'} color={'white'} >
-        <Link to={'/Layout'}>
-        Get Started!
-        </Link>
-        </Button>
-    
-</Stack>
-
-      
-    </Box>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path='/Layout' element ={<Layout/>}>
+        <Route index element ={<Notes/>}/>
+        <Route path="list" element={<List />} />
+        {/* <Route path="noteCanva" element={<NoteCanva  cards={cards} setCards={setCards} note={note} setNote={setNote} />} /> */}
+      </Route>
+    </Routes>
+  </BrowserRouter>
   )
 }
 
