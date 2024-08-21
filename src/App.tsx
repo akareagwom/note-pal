@@ -3,13 +3,14 @@ import Notes from './notes/Notes.tsx'
 import List from './list/List.tsx'
 import NoteCanva from './notes/components/noteCanva.tsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './index.tsx'
 
 function App() {
 
   return (
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />} />
+      <Route path="/" element={<Home />} />
       <Route path='/Layout' element ={<Layout/>}>
         <Route index element ={<Notes/>}/>
         <Route path="list" element={<List />} />
