@@ -1,13 +1,23 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
-// import './index.css'
-import { ChakraProvider } from '@chakra-ui/react'
+import React, { useState } from 'react';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App';
+import { ChakraProvider } from '@chakra-ui/react';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <ChakraProvider>
-      <App/>
-    </ChakraProvider>
-  </StrictMode>,
-)
+const root = createRoot(document.getElementById('root')!);
+
+const MainComponent: React.FC = () => {
+  const [cards, setCards] = useState<string[]>([]); 
+  const [note, setNote] = useState<string>(''); 
+
+  return (
+    <StrictMode>
+      <ChakraProvider>
+        <App cards={cards} setCards={setCards} setNote={setNote} note={note} />
+      </ChakraProvider>
+    </StrictMode>
+  );
+};
+
+root.render(<MainComponent />);
+
