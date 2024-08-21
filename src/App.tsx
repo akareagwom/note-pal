@@ -1,21 +1,22 @@
 import Layout from './components/Layout.tsx'
 import Notes from './notes/Notes.tsx'
 import List from './list/List.tsx'
-// import NoteCanva from './notes/components/noteCanva.tsx'
+import NoteCanva from './notes/components/noteCanva.tsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './index.tsx'
+import {useState} from 'react'
 
 
-// interface Props {
-//   note: string;
-//   setNote: React.Dispatch<React.SetStateAction<string>>;
-//   cards: string[];
-//   setCards: React.Dispatch<React.SetStateAction<string[]>>;
-// }
+interface Props {
+  note: string;
+  setNote: React.Dispatch<React.SetStateAction<string>>;
+  cards: string[];
+  setCards: React.Dispatch<React.SetStateAction<string[]>>;
+}
 
-const App: React.FC = () => {
-  // const [cards, setCards] = useState<string[]>([]);
-  // const [note, setNote] = useState<string>('');
+const App: React.FC<Props> = () => {
+  const [cards, setCards] = useState<string[]>([]);
+  const [note, setNote] = useState<string>('');
   return (
     <BrowserRouter>
     <Routes>
@@ -23,7 +24,7 @@ const App: React.FC = () => {
       <Route path='/Layout' element ={<Layout/>}>
         <Route index element ={<Notes/>}/>
         <Route path="list" element={<List />} />
-        {/* <Route path="noteCanva" element={<NoteCanva  cards={cards} setCards={setCards} note={note} setNote={setNote} />} /> */}
+        <Route path="noteCanva" element={<NoteCanva  cards={cards} setCards={setCards} note={note} setNote={setNote} />} />
       </Route>
     </Routes>
   </BrowserRouter>
