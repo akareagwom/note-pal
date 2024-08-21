@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
 // import Record from "./components/Record";
-import CardComp from "./components/CardComp";
+// import CardComp from "./components/CardComp";
 import NoteCanva from "./components/noteCanva";
 import { useState } from 'react';
 // import ListCanva from "./components/ListCanva";
