@@ -1,10 +1,10 @@
 import Layout from './components/Layout.tsx'
 import Notes from './notes/Notes.tsx'
 import List from './list/List.tsx'
-import NoteCanva from './notes/components/noteCanva.tsx'
+// import NoteCanva from './notes/components/noteCanva.tsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './index.tsx'
-import {useState} from 'react'
+
 
 // interface Props {
 //   note: string;
