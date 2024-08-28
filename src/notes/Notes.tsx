@@ -11,6 +11,12 @@ const   Notes =()=>{
     const [cards,setCards] = useState<string[]>(()=>{
         return getFromLocalStorage('cards') || [];
     })
+    // const [showCard, setShowCard] = useState(false);
+    const [name, setName] = useState('');
+
+    const handleName =()=>{
+        setName(note);
+    }
   
     return (
         <Box  h={'100vh'}>
@@ -20,6 +26,7 @@ const   Notes =()=>{
             {/* <Record/> */}
 
              <CardComp cards={cards} setCards={setCards} note={note} setNote={setNote} />
+             
             </Box> 
      
         </Box>
