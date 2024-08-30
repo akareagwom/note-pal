@@ -2,7 +2,7 @@ import { Box, Button, Textarea, Flex, Icon,Text,Card, CardBody, } from '@chakra-
 import React, {Dispatch, SetStateAction  } from 'react';
 import { IoIosClose } from "react-icons/io";
 import {saveToLocalStorage,getFromLocalStorage} from '../../localStorageUtils'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 interface Props {
     note: string;
@@ -12,16 +12,13 @@ interface Props {
   }
 
 const NoteCanva: React.FC<Props> = ({ note, setNote,cards, setCards }) => {
+  const navigation = useNavigate();
 
   const handleNoteChange = () => {
     if (note.trim()) { 
         setCards([...cards, note]); 
         setNote('');
-        return(
-          <Card>
-            <CardBody>{cards}</CardBody>
-          </Card>
-        )
+        navigation('/Layout', { state: { cards: [...cards, note] } });
     }
   };
 
