@@ -1,4 +1,4 @@
-import { Box, Button, Textarea, Flex, Icon,Text } from '@chakra-ui/react';
+import { Box, Button, Textarea, Flex, Icon,Text,Card, CardBody, } from '@chakra-ui/react';
 import React, {Dispatch, SetStateAction  } from 'react';
 import { IoIosClose } from "react-icons/io";
 import {saveToLocalStorage,getFromLocalStorage} from '../../localStorageUtils'
@@ -17,6 +17,11 @@ const NoteCanva: React.FC<Props> = ({ note, setNote,cards, setCards }) => {
     if (note.trim()) { 
         setCards([...cards, note]); 
         setNote('');
+        return(
+          <Card>
+            <CardBody>{cards}</CardBody>
+          </Card>
+        )
     }
   };
 
@@ -38,9 +43,9 @@ const NoteCanva: React.FC<Props> = ({ note, setNote,cards, setCards }) => {
         value={note}
         onChange={(e) => setNote(e.target.value)}
       />
-      <Text>
+      {/* <Text>
         {cards}
-      </Text>
+      </Text> */}
     </Box>
   );
 };
