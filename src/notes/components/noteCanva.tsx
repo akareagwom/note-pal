@@ -1,4 +1,4 @@
-import { Box, Button, Textarea, Flex, Icon } from '@chakra-ui/react';
+import { Box, Button, Textarea, Flex, Icon,Text } from '@chakra-ui/react';
 import React, {Dispatch, SetStateAction  } from 'react';
 import { IoIosClose } from "react-icons/io";
 import {saveToLocalStorage,getFromLocalStorage} from '../../localStorageUtils'
@@ -25,9 +25,7 @@ const NoteCanva: React.FC<Props> = ({ note, setNote,cards, setCards }) => {
       <Flex pr={4} justifyContent={'space-between'}>
         <Icon color={'#272140'} fontSize={20} fontWeight={300} as={IoIosClose} />
         <Button onClick={handleNoteChange} borderRadius={20} h={6} bg={'#e53756'} color={'white'}>
-          <Link to='/Layout'>
             Save
-          </Link>
           </Button>
     </Flex>
       <Textarea
@@ -40,6 +38,9 @@ const NoteCanva: React.FC<Props> = ({ note, setNote,cards, setCards }) => {
         value={note}
         onChange={(e) => setNote(e.target.value)}
       />
+      <Text>
+        {cards}
+      </Text>
     </Box>
   );
 };
