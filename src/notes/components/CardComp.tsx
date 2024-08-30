@@ -1,5 +1,6 @@
 import { Box,  Card, CardBody, Text, Flex} from "@chakra-ui/react"
 import React, {Dispatch, SetStateAction  } from 'react';
+import { useLocation } from 'react-router-dom';
 import AddNotes from "./AddNotes";
 
 interface Props {
@@ -9,7 +10,10 @@ interface Props {
     setCards: Dispatch<SetStateAction<string[]>>;
   }
 
-const CardComp: React.FC<Props> =({ cards, note,setCards,setNote})=>{
+const CardComp: React.FC<Props> =({ note,setCards,setNote})=>{
+    const location = useLocation();
+  const { cards } = location.state as { cards: string[] };
+
     return(
         <Flex  gap={2} flexWrap={'wrap'}>
             {cards.map((card)=>(
