@@ -12,11 +12,11 @@ interface Props {
 
 const CardComp: React.FC<Props> =({ note,setCards,setNote})=>{
     const location = useLocation();
-  const { cards } = location.state as { cards: string[] };
+  const  cards  = location.state?.cards|| [];
 
     return(
         <Flex  gap={2} flexWrap={'wrap'}>
-            {cards.map((card)=>(
+            {cards.map((card: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined)=>(
                 <Card borderRadius={15} w={'45%'} p={4} bg='rgba(218,187,250,255)'>
                     <CardBody >
                         <Text color={'#272140'}>{card}</Text>
