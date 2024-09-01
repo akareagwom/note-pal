@@ -31,6 +31,7 @@ const NoteCanva: React.FC<Props> = ({ note, setNote,cards, setCards }) => {
         <Button onClick={handleNoteChange} borderRadius={20} h={6} bg={'#e53756'} color={'white'}>
             Save
           </Button>
+          <Button onClick={()=>{setItem}}>set me</Button>
     </Flex>
       <Textarea
         color={'#272140'}
