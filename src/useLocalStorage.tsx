@@ -1,3 +1,3 @@
-export const useLocalStorage=()=>{
-    
+export const useLocalStorage=(key: string)=>{
+
 }
