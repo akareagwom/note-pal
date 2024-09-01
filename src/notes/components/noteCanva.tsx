@@ -1,7 +1,7 @@
 import { Box, Button, Textarea, Flex, Icon,Text,Card, CardBody, } from '@chakra-ui/react';
 import React, {Dispatch, SetStateAction  } from 'react';
 import { IoIosClose } from "react-icons/io";
-import {saveToLocalStorage,getFromLocalStorage} from '../../localStorageUtils'
+// import {saveToLocalStorage,getFromLocalStorage} from '../../localStorageUtils'
 import { Link, useNavigate } from 'react-router-dom';
 
 interface Props {
