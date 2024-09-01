@@ -28,10 +28,11 @@ const NoteCanva: React.FC<Props> = ({ note, setNote,cards, setCards }) => {
     <Box>
       <Flex pr={4} justifyContent={'space-between'}>
         <Icon color={'#272140'} fontSize={20} fontWeight={300} as={IoIosClose} />
+          <Button variant={'none'} onClick={()=>{setItem}}>
         <Button onClick={handleNoteChange} borderRadius={20} h={6} bg={'#e53756'} color={'white'}>
-            Save
+              Save
           </Button>
-          <Button onClick={()=>{setItem}}>set me</Button>
+          </Button>
     </Flex>
       <Textarea
         color={'#272140'}
