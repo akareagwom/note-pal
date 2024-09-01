@@ -3,6 +3,7 @@ import React, {Dispatch, SetStateAction  } from 'react';
 import { IoIosClose } from "react-icons/io";
 // import {saveToLocalStorage,getFromLocalStorage} from '../../localStorageUtils'
 import { Link, useNavigate } from 'react-router-dom';
+import { useLocalStorage } from '../../useLocalStorage';
 
 interface Props {
     note: string;
@@ -13,6 +14,7 @@ interface Props {
 
 const NoteCanva: React.FC<Props> = ({ note, setNote,cards, setCards }) => {
   const navigation = useNavigate();
+  useLocalStorage();
 
   const handleNoteChange = () => {
     if (note.trim()) { 
