@@ -1,5 +1,5 @@
-import { Box, Button, Textarea, Flex, Icon,Text,Card, CardBody, } from '@chakra-ui/react';
-import React, {Dispatch, SetStateAction  } from 'react';
+import { Box, Button, Textarea, Flex, Icon,Text,Card, CardBody, Input, } from '@chakra-ui/react';
+import React, {Dispatch, SetStateAction, useState  } from 'react';
 import { IoIosClose } from "react-icons/io";
 // import {saveToLocalStorage,getFromLocalStorage} from '../../localStorageUtils'
 import { Link, useNavigate } from 'react-router-dom';
@@ -14,7 +14,8 @@ interface Props {
 
 const NoteCanva: React.FC<Props> = ({ note, setNote,cards, setCards }) => {
   const navigation = useNavigate();
-  const {setItem}=  useLocalStorage('cards');
+  const {setItem}=  useLocalStorage('note');
+  // const [value, setValue]= useState('')
 
   const handleNoteChange = () => {
     if (note.trim()) { 
@@ -28,10 +29,11 @@ const NoteCanva: React.FC<Props> = ({ note, setNote,cards, setCards }) => {
     <Box>
       <Flex pr={4} justifyContent={'space-between'}>
         <Icon color={'#272140'} fontSize={20} fontWeight={300} as={IoIosClose} />
-          <Button variant={'none'} onClick={()=>{setItem}}>
         <Button onClick={handleNoteChange} borderRadius={20} h={6} bg={'#e53756'} color={'white'}>
               Save
           </Button>
+          <Button variant={'none'} onClick={()=>setItem(note)}>
+            click
           </Button>
     </Flex>
       <Textarea

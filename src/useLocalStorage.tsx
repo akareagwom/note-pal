@@ -1,6 +1,6 @@
 export const useLocalStorage=(key: string)=>{
-    const setItem =(cards:unknown)=>{
-        localStorage.setItem(key, JSON.stringify(cards));
+    const setItem =(note:unknown)=>{
+        localStorage.setItem(key, JSON.stringify(note));
     }
-    return{setItem}
+    return{setItem};
 }
