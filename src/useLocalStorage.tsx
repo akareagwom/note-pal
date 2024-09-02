@@ -6,5 +6,13 @@ export const useLocalStorage=(key: string)=>{
             console.log(error)
         }
     }
-    return{setItem};
+    const getItem =() => {
+        try{
+           const item = localStorage.getItem(key)
+           return item ? JSON.parse(item) : undefined;
+        }catch(error){
+            console.log(error)
+        }
+    }
+    return{setItem, getItem};
 }
