@@ -1,6 +1,10 @@
 export const useLocalStorage=(key: string)=>{
     const setItem =(note:unknown)=>{
-        localStorage.setItem(key, JSON.stringify(note));
+        try{
+            localStorage.setItem(key, JSON.stringify(note));
+        }catch(error){
+            console.log(error)
+        }
     }
     return{setItem};
 }
