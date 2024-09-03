@@ -14,7 +14,7 @@ interface Props {
 
 const NoteCanva: React.FC<Props> = ({ note, setNote,cards, setCards }) => {
   const navigation = useNavigate();
-  const {setItem,getItem}=  useLocalStorage('note');
+  const {setItem, getItem, removeItem}=  useLocalStorage('note');
   // const [value, setValue]= useState('')
 
   const handleNoteChange = () => {
@@ -36,6 +36,7 @@ const NoteCanva: React.FC<Props> = ({ note, setNote,cards, setCards }) => {
             click
           </Button>
           <Button onClick={()=>console.log(getItem())}>me</Button>
+          <Button onClick={()=>console.log(removeItem())}>remove</Button>
     </Flex>
       <Textarea
         color={'#272140'}

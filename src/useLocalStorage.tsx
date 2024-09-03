@@ -21,5 +21,5 @@ export const useLocalStorage=(key: string)=>{
             console.log(error)
         }
     }
-    return{setItem, getItem};
+    return{setItem, getItem, removeItem};
 }
