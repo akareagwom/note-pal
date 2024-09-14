@@ -55,10 +55,12 @@ const NavBar =()=>{
                         <Text ml={4} fontSize={15}>Recording</Text>
                     </Flex>
                 </Link>
-                <Flex alignItems={'center'}  >
-                    <Icon color={'white'} as={FaPen}/>
-                    <Text ml={4} fontSize={15}>Sketches</Text>
-                </Flex>
+                <Link to='edit'>
+                    <Flex alignItems={'center'}  >
+                        <Icon color={'white'} as={FaPen}/>
+                        <Text ml={4} fontSize={15}>Sketches</Text>
+                    </Flex>
+                </Link>
                 <Flex mt={20} alignItems={'center'}  >
                     <Icon color={'white'} as={FaTrash}/>
                     <Text ml={4} fontSize={15}>Trash</Text>
