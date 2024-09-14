@@ -28,7 +28,7 @@ const App: React.FC<Props> = () => {
         <Route path="list" element={<List />} />
         <Route path="noteCanva" element={<NoteCanva  cards={cards} setCards={setCards} note={note} setNote={setNote} />} />
         <Route path='recorder' element={<Recorder/>}/>
-        {/* <Route path='sketches' element={<Sketches/>}/> */}
+        <Route path='sketches' element={<Sketches/>}/>
       </Route>
     </Routes>
   </BrowserRouter>
