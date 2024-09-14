@@ -55,7 +55,7 @@ const NavBar =()=>{
                         <Text ml={4} fontSize={15}>Recording</Text>
                     </Flex>
                 </Link>
-                <Link to='edit'>
+                <Link to='sketches'>
                     <Flex alignItems={'center'}  >
                         <Icon color={'white'} as={FaPen}/>
                         <Text ml={4} fontSize={15}>Sketches</Text>
