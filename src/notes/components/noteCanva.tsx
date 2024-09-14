@@ -14,7 +14,7 @@ interface Props {
 
 const NoteCanva: React.FC<Props> = ({ note, setNote,cards, setCards }) => {
   const navigation = useNavigate();
-  const {setItem, getItem, removeItem}=  useLocalStorage('note');
+  const {setItem, getItem, removeItem}=  useLocalStorage('value');
   // const [value, setValue]= useState('')
 
   const handleNoteChange = () => {
