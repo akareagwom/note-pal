@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './index.tsx'
 import {useState} from 'react'
 import Recorder from './notes/components/Recorder.tsx'
+import Sketches from './sketches/Sketches.tsx'
 
 
 interface Props {
@@ -27,6 +28,7 @@ const App: React.FC<Props> = () => {
         <Route path="list" element={<List />} />
         <Route path="noteCanva" element={<NoteCanva  cards={cards} setCards={setCards} note={note} setNote={setNote} />} />
         <Route path='recorder' element={<Recorder/>}/>
+        {/* <Route path='sketches' element={<Sketches/>}/> */}
       </Route>
     </Routes>
   </BrowserRouter>
