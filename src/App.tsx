@@ -7,6 +7,7 @@ import Home from './index.tsx'
 import {useState} from 'react'
 import Recorder from './notes/components/Recorder.tsx'
 import Sketches from './sketches/Sketches.tsx'
+import Trash from './Trash/Trash.tsx'
 
 
 interface Props {
@@ -29,6 +30,7 @@ const App: React.FC<Props> = () => {
         <Route path="noteCanva" element={<NoteCanva  cards={cards} setCards={setCards} note={note} setNote={setNote} />} />
         <Route path='recorder' element={<Recorder/>}/>
         <Route path='sketches' element={<Sketches/>}/>
+        <Route path='' element={<Trash/>}/>
       </Route>
     </Routes>
   </BrowserRouter>
