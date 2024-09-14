@@ -49,7 +49,7 @@ const NavBar =()=>{
                         <Text ml={4} fontSize={15}>List</Text>
                     </Flex>
                 </Link>
-                <Link to=''>
+                <Link to='recorder'>
                     <Flex alignItems={'center'}  >
                         <Icon color={'white'} as={FaMicrophone}/>
                         <Text ml={4} fontSize={15}>Recording</Text>
