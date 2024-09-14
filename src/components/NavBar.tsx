@@ -49,10 +49,12 @@ const NavBar =()=>{
                         <Text ml={4} fontSize={15}>List</Text>
                     </Flex>
                 </Link>
-                <Flex alignItems={'center'}  >
-                    <Icon color={'white'} as={FaMicrophone}/>
-                    <Text ml={4} fontSize={15}>Recording</Text>
-                </Flex>
+                <Link to=''>
+                    <Flex alignItems={'center'}  >
+                        <Icon color={'white'} as={FaMicrophone}/>
+                        <Text ml={4} fontSize={15}>Recording</Text>
+                    </Flex>
+                </Link>
                 <Flex alignItems={'center'}  >
                     <Icon color={'white'} as={FaPen}/>
                     <Text ml={4} fontSize={15}>Sketches</Text>
