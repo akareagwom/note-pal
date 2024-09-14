@@ -5,6 +5,7 @@ import NoteCanva from './notes/components/noteCanva.tsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './index.tsx'
 import {useState} from 'react'
+import Recorder from './notes/components/Recorder.tsx'
 
 
 interface Props {
@@ -25,6 +26,7 @@ const App: React.FC<Props> = () => {
         <Route index element ={<Notes/>}/>
         <Route path="list" element={<List />} />
         <Route path="noteCanva" element={<NoteCanva  cards={cards} setCards={setCards} note={note} setNote={setNote} />} />
+        <Route path='recorder' element={<Recorder/>}/>
       </Route>
     </Routes>
   </BrowserRouter>
