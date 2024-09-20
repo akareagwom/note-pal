@@ -10,6 +10,7 @@ const List: React.FC<Props> = ({  }) => {
   return (
     <Box> 
         <AddList/>
+        hola
     </Box>
   );
 };
