@@ -15,11 +15,11 @@ const Home: React.FC<Props> =({})=>{
         </Box>
         <Stack mt={16} spacing={3}>
             <Text>Email address</Text>
-            <Input bg={'#544c83'} border={'none'} borderRadius={'10px'} w={'400px'} placeholder='medium size' size='md' />
+            <Input bg={'#544c83'} border={'none'} borderRadius={'10px'} w={'400px'} placeholder='email' size='md' />
             <Text>Password</Text>
-            <Input bg={'#544c83'} border={'none'} borderRadius={'10px'} w={'400px'} placeholder='medium size' size='md' />
+            <Input bg={'#544c83'} border={'none'} borderRadius={'10px'} w={'400px'} placeholder='password' size='md' />
             <Text>Repeat password</Text>
-            <Input bg={'#544c83'} border={'none'} borderRadius={'10px'} w={'400px'} placeholder='medium size' size='md' />
+            <Input bg={'#544c83'} border={'none'} borderRadius={'10px'} w={'400px'} placeholder='password' size='md' />
             <Button bg={'#e53756'} borderRadius={'10px'} color={'white'} >
                 <Link to={'/Layout'}>
                 Get Started!
