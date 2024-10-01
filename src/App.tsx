@@ -5,9 +5,10 @@ import NoteCanva from './notes/components/noteCanva.tsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './index.tsx'
 import {useState} from 'react'
-import Recorder from './notes/components/Recorder.tsx'
+// import Recorder from './notes/components/Recorder.tsx'
 import Sketches from './sketches/Sketches.tsx'
 import Trash from './Trash/Trash.tsx'
+import Recorder from './recorder/index.tsx'
 
 
 interface Props {
