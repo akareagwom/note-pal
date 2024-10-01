@@ -6,7 +6,10 @@ import {
     Input,
     Stack,
     Text,
-    Avatar
+    Avatar,
+    Tabs,
+    TabList,
+    Tab
   } from "@chakra-ui/react";
 import { FaStickyNote, FaMicrophone, FaPen, FaTrash } from "react-icons/fa";
 import { LiaListAlt } from "react-icons/lia";
@@ -66,6 +69,15 @@ const NavBar =()=>{
                     <Text ml={4} fontSize={15}>Trash</Text>
                 </Flex>
             </Stack>
+            <Tabs>
+                <TabList>
+                    <Tab>Notes</Tab>
+                    <Tab>List</Tab>
+                    <Tab>Recording</Tab>
+                    <Tab>Sketches</Tab>
+                    <Tab>Trash</Tab>
+                </TabList>
+            </Tabs>
         </Box>
     )
 }

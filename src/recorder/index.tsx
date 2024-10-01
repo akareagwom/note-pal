@@ -8,7 +8,7 @@ interface Props {
 const Recorder: React.FC<Props> = ({  }) => {
   return (
     <Box>
-      hola
+      
     </Box>
   );
 };
