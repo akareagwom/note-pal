@@ -8,18 +8,18 @@ interface Props{
 
 const Home: React.FC<Props> =({})=>{
     return(
-    <Box w='100%' display={'flex'} flexDir={'column'} alignItems={'center'} color='white' h={'100vh'} bg={'#272140'}>
-        <Box textAlign={'left'} mr={'140px'} mt={6}>
+    <Box w='100%' display={'flex'} flexDir={'column'} justifyContent={'center'} alignItems={'center'} color='white' h={'100vh'} bg={'#272140'}>
+        <Box>
         <Heading color={'white'} fontSize={'3rem'}>Remind me</Heading>
         <Text color={'#544c83'}>Note taking made easy</Text>
         </Box>
         <Stack mt={16} spacing={3}>
             <Text>Email address</Text>
-            <Input bg={'#544c83'} border={'none'} borderRadius={'10px'} w={'400px'} placeholder='email' size='md' />
+            <Input bg={'#544c83'} border={'none'} borderRadius={'10px'} w={{lg:'400px',base:'300px'}} placeholder='email' size='md' />
             <Text>Password</Text>
-            <Input bg={'#544c83'} border={'none'} borderRadius={'10px'} w={'400px'} placeholder='password' size='md' />
+            <Input bg={'#544c83'} border={'none'} borderRadius={'10px'} w={{lg:'400px',base:'300px'}} placeholder='password' size='md' />
             <Text>Repeat password</Text>
-            <Input bg={'#544c83'} border={'none'} borderRadius={'10px'} w={'400px'} placeholder='password' size='md' />
+            <Input bg={'#544c83'} border={'none'} borderRadius={'10px'} w={{lg:'400px',base:'300px'}} placeholder='password' size='md' />
             <Button bg={'#e53756'} borderRadius={'10px'} color={'white'} >
                 <Link to={'/Layout'}>
                 Get Started!
