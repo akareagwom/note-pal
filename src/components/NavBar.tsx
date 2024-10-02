@@ -34,9 +34,9 @@ const NavBar =()=>{
                 </Flex>
             </Flex>
 
-            <Box>
-                <Input placeholder="Search note" border={0} mt={4} color={'gray'} textAlign={'center'} fontSize={12} p={5} borderRadius={{lg:20,base:10}} h={8} w={'52'} bg={{lg:'#272140',base:'#544c83'}} />
-                <Button bg={'#e53756'} color={'white'} p={0} mt={4} borderRadius={20} fontSize={12} h={8} w={'52'}>New Note</Button>
+            <Box display={{base:'flex', lg:'block'}} flexDir={'column'} justifyContent={'center'} alignItems={'center'}>
+                <Input placeholder="Search note" border={0} mt={4} color={'gray'} textAlign={'center'} fontSize={12} p={5} borderRadius={{lg:20,base:10}} h={8} w={{lg:'52',base:'300px'}} bg={{lg:'#272140',base:'#544c83'}} />
+                <Button display={{base:'none',lg:'block'}} bg={'#e53756'} color={'white'} p={0} mt={4} borderRadius={20} fontSize={12} h={8} w={'52'}>New Note</Button>
             </Box>
 
             <Stack display={{base:'none',md:'block'}} lineHeight={2} mt={6} color={'white'}>
