@@ -8,12 +8,12 @@ interface Props{
 
 const Home: React.FC<Props> =({})=>{
     return(
-    <Box w='100%' display={'flex'} flexDir={'column'} justifyContent={'center'} alignItems={'center'} color='white' h={'100vh'} bg={'#272140'}>
+    <Box w={{lg:'100%',base:'100%'}} h={'100vh'} py={{base:'',lg:'7%'}} display={'flex'} flexDir={'column'} justifyContent={'center'} alignItems={'center'} color='white' bg={'#272140'}>
         <Box>
         <Heading color={'white'} fontSize={'3rem'}>Remind me</Heading>
         <Text color={'#544c83'}>Note taking made easy</Text>
         </Box>
-        <Stack mt={16} spacing={3}>
+        <Box mt={16}>
             <Text>Email address</Text>
             <Input bg={'#544c83'} border={'none'} borderRadius={'10px'} w={{lg:'400px',base:'300px'}} placeholder='email' size='md' />
             <Text>Password</Text>
@@ -26,7 +26,7 @@ const Home: React.FC<Props> =({})=>{
                 </Link>
             </Button>
     
-        </Stack>
+        </Box>
 
      
    </Box>
