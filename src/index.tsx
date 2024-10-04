@@ -22,7 +22,7 @@ const Home: React.FC<Props> =({})=>{
             <Input bg={'#544c83'} border={'none'} borderRadius={'10px'} w={{lg:'400px',base:'300px'}} placeholder='password' size='md' />
             <Button bg={'#e53756'} borderRadius={'10px'} color={'white'} >
                 <Link to={'/Layout'}>
-                Get Started!
+                Get Started!!
                 </Link>
             </Button>
     
